@@ -1,0 +1,97 @@
+html, body {
+  padding:0;
+  margin:0;
+}
+
+h1 {
+  text-align: center;
+}
+
+.tbl {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  height: 80vh;
+}
+
+.periodRow {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-column-gap: 1px;
+}
+
+.element {
+  color: black;
+  position: relative;
+  margin: 2px;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.symbol {
+  font-size: 3vw;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.atomicNumber {
+  font-size: 1vw;
+  float: left;
+  margin: 0;
+  position: absolute; 
+  bottom: 0;
+}
+.atomicWeight {
+  font-size: 1vw;
+  float: right;
+}
+
+.alkalimetal{
+  background-color: #33CCFF;
+}
+
+.AlkalineEarthMetals{
+  background-color: #FFCC99;
+}
+
+.lanthanide{
+  background-color: #99FFCC;
+}
+
+.actinide{
+  background-color: #33CCCC;
+}
+
+.transmetal{
+  background-color: #66FF66;
+}
+
+.synthetic{
+  background-color: #f9f9f9;
+}
+
+.posttransmetal{
+  background-color: #FFCCCC;
+}
+
+.metalloid{
+  background-color: #FF9999;
+}
+
+.nonmetal{
+  background-color: #ffff66;
+}
+
+.halogen{
+  background-color: coral;
+}
+
+.noblegas{
+  background-color: #FF99FF;
+}
