@@ -1,0 +1,21 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles point representation in space by 5 characteristics:
+- X axis
+- Y axis
+- Z axis
+- w (homogeneous coordinate, optional, default: 1)
+- color (from Color class ex00, optional)
+
+If 'w' and/or 'color' are provided, it initializes the variables. If color is
+not specified, default will be (255, 255, 255).
+
+The class provides the following methods :
+
+Vertex doc();
+Prints out this documentation file.
+
+Each variable has get and set methods:
+
+Vertex getX();
+Vertex setX($x);
+---------------------------------------------------------------------- Vertex ->

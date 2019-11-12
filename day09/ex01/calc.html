@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator</title>
+        <script>
+            let n1;
+            let n2;
+            let op;
+            let subm;
+
+            window.onload = function() {
+                n1 = document.querySelector("#num1");
+                n2 = document.querySelector("#num2");
+                op = document.querySelector("#op");
+                subm = document.querySelector("#calc");
+                subm.addEventListener("submit", passIt);
+                setInterval(function() {alert("Please, use me...");}, 30000);
+            }
+
+            function passIt() {
+                let l = Number(n1.value);
+                let r = Number(n2.value);
+                if (l < 0 || r < 0 || isNaN(l) || isNaN(r)) {
+                    alert("Error :(");
+                    return;
+                }
+                switch(op.value) {
+                    case "+":
+                        calcIt(l + r);
+                        break;
+                    case "-":
+                        calcIt(l - r);
+                        break;
+                    case "*":
+                        calcIt(l * r);
+                        break;
+                    case "%":
+                        if (r === 0)
+                            calcIt("It’s over 9000!")
+                        else
+                            calcIt(l % r);
+                        break;
+                    case "/":
+                        if (r === 0)
+                            calcIt("It’s over 9000!")
+                        else
+                            calcIt(l / r);
+                        break;
+                }
+            }
+
+            function calcIt(a) {
+                console.log(a);
+                alert(a);
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>Simple Calculator</h1>
+        <form action = "" id = "calc">
+            <input type="text" name = "Number_1" id = "num1">
+            <select id = "op">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+            <input type="text" name = "Number_2" id = "num2">
+            <input type="submit" value="Try me!" id = "submit">
+        </form>
+    </body>
+</html>

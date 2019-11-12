@@ -1,0 +1,51 @@
+<- Vector ----------------------------------------------------------------------
+The Vector class handles lines, directions and movements by 4 characteristics:
+- X value
+- Y value
+- Z value
+- w (homogeneous coordinate, arbitrary, default: 0.0)
+
+For constructor, the following keys should be provided:
+- dest: Destination vertex (mandatory)
+- orig: Origin vertex (optional, def: 0,0,0)
+
+The class provides the following methods :
+
+Vertex doc();
+Prints out this documentation file.
+
+Each variable has get methods:
+Vector getX();
+
+Vector   magnitude();
+Returns vector's length
+
+Vector   normalize();
+Returns new instance of Vector class normalized
+
+Vector add( Vector $rhs )
+Returns the result of the sum between current Vector and $rhs in new instance of
+ Vector class
+
+Vector sub( Vector $rhs )
+Returns the result of the substract between current Vector and $rhs in new
+instance of Vector class
+
+Vector opposite()
+Returns the opposite of the current Vector in new instance of Vector class
+
+Vector scalarProduct( $k )
+Returns the result of the scalar product between current Vector and the scalar
+$k in new instance of Vector class
+
+Vector dotProduct( Vector $rhs )
+Returns the result of the scalar product between current Vector and the vector
+$rhs in new instance of Vector class
+
+Vector cos( Vector $rhs )
+Returns vectors's cos
+
+Vector crossProduct( Vector $rhs )
+Returns the result of the cross product between current Vector and the vector
+$rhs in new instance of Vector class
+---------------------------------------------------------------------- Vector ->

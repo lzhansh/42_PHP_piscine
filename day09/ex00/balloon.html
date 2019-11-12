@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Balloon</title>
+        <style>
+            div {
+                height: 200px;
+                width: 200px;
+                background-color: red;
+                border-radius: 50%;
+            }
+        </style>
+        <script>
+            let colors = {0: '#ff0000', 1: '#00ff00', 2: '#0000ff'};
+            let col_num = 0;
+            let size = 200;
+            let b;
+            window.onload = function() {
+                sampleDiv = document.querySelector("#balloon");
+                sampleDiv.addEventListener('click', mouseClick);
+                sampleDiv.addEventListener('mouseleave', noMouse);
+            }
+
+            function mouseClick() {
+                size += 10;
+                if (size > 420) {
+                    size = 200;
+                }
+                col_num += 1;
+                if (col_num > 2) {
+                    col_num = 0;
+                }
+                updateBalloon(size, col_num);
+            }
+
+            function noMouse() {
+                size -= 5;
+                if (size < 200) {
+                    size = 200;
+                }
+                col_num -= 1;
+                if (col_num < 0) {
+                    col_num = 2;
+                }
+                updateBalloon(size, col_num);
+            }
+
+            function updateBalloon(size, col_num) {
+                sampleDiv.style.height = size + 'px';
+                sampleDiv.style.width = size + 'px';
+                sampleDiv.style.backgroundColor = colors[col_num];
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id = "balloon">
+
+        </div>
+    </body>
+</html>
